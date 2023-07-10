@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nerfbusters"
+version = "0.0.0"
+description = "Nerfbusters package"
+requires-python = ">=3.7.3"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python",
+]
+dependencies = [
+    "diffusers==0.12.1",
+    "dotmap",
+    "trimesh",
+    "pysdf",
+    "pytorch-lightning==1.8.6",
+    "scipy",
+    "GPUtil"
+]
+
+[tool.setuptools.packages.find]
+include = ["nerfbusters*"]
+
+[project.entry-points.'nerfstudio.method_configs']
+nerfbusters = "nerfbusters.nerf.nerfbusters_config:nerfbusters_config"
+
+[project.scripts]
+nerfbusters-setup = "nerfbusters.download_nerfbusters_dataset:nerfbusters_setup"
