@@ -37,7 +37,7 @@ set -e
 
 # Determine project root dir programmatically.
 SRC_PATH=$PWD
-DOCKER_IMAGE=nerfbusters
+DOCKER_IMAGE=dromni/nerfstudio:0.2.1
 
 
 CMD="docker run \
@@ -46,11 +46,11 @@ CMD="docker run \
   --runtime=nvidia \
   -e NVIDIA_DRIVER_CAPABILITIES=compute,utility \
   -e NVIDIA_VISIBLE_DEVICES=all \
-  -e TF_CPP_MIN_LOG_LEVEL=2 \
+  --ipc=host \
   --net=host \
+  -v $HOME/.cache/:/home/user/.cache/
   -u 0 \
 "
-
 
 if [[ $DETACH == 'False' ]]; then
   CMD+="-it --entrypoint bash ${DOCKER_IMAGE}"
