@@ -50,6 +50,7 @@ CMD="docker run \
   --net=host \
   -v $HOME/.cache/:/home/user/.cache/
   -u 0 \
+  -v $SRC_PATH:$WORKING_DIR
   -w ${WORKING_DIR} \
 "
 
