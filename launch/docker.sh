@@ -37,8 +37,8 @@ set -e
 
 # Determine project root dir programmatically.
 SRC_PATH=$PWD
-DOCKER_IMAGE=dromni/nerfstudio:0.2.1
-
+DOCKER_IMAGE=nerfbusters
+WORKING_DIR=/nerfbusters
 
 CMD="docker run \
   --rm \
@@ -50,6 +50,7 @@ CMD="docker run \
   --net=host \
   -v $HOME/.cache/:/home/user/.cache/
   -u 0 \
+  -w ${WORKING_DIR} \
 "
 
 if [[ $DETACH == 'False' ]]; then

@@ -1,7 +1,7 @@
 FROM dromni/nerfstudio:0.3.2
 
 # Change Nerfstudio Branch
-WORKDIR /nerfstudio
+WORKDIR /
 RUN git clone https://github.com/nerfstudio-project/nerfstudio.git
 RUN cd nerfstudio && git checkout nerfbusters-changes && pip install -e .
 
