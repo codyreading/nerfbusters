@@ -69,17 +69,17 @@ experiments_list = [
         name="nerfacto-visibility-cube",
         arg_string="--pipeline.use_visibility_loss True --pipeline.use_singlestep_cube_loss True",
     ),
-    Argument(
-        name="nerfacto-visibility-sparsity",
-        arg_string="--pipeline.use_visibility_loss True --pipeline.use_singlestep_cube_loss False --pipeline.use_sparsity_loss True",
-    ),
-    Argument(
-        name="nerfacto-visibility-TV",
-        arg_string="--pipeline.use_visibility_loss True --pipeline.use_singlestep_cube_loss False --pipeline.use_total_variation_loss True",
-    ),
-    Argument(
-        name="nerfacto-visibility-regnerf",
-        arg_string="--pipeline.use_visibility_loss True --pipeline.use_singlestep_cube_loss False --pipeline.use_regnerf_loss True",
-    )
+    # Argument(
+    #     name="nerfacto-visibility-sparsity",
+    #     arg_string="--pipeline.use_visibility_loss True --pipeline.use_singlestep_cube_loss False --pipeline.use_sparsity_loss True",
+    # ),
+    # Argument(
+    #     name="nerfacto-visibility-TV",
+    #     arg_string="--pipeline.use_visibility_loss True --pipeline.use_singlestep_cube_loss False --pipeline.use_total_variation_loss True",
+    # ),
+    # Argument(
+    #     name="nerfacto-visibility-regnerf",
+    #     arg_string="--pipeline.use_visibility_loss True --pipeline.use_singlestep_cube_loss False --pipeline.use_regnerf_loss True",
+    # )
 ]
 arguments_list_of_lists.append(experiments_list)
