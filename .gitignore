@@ -13,3 +13,5 @@ old*/
 tmp/
 bins/
 models/
+*.zip
+*ipynb_checkpoints*
